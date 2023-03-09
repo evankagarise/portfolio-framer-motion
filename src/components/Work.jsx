@@ -1,16 +1,28 @@
 import React from 'react'
 import { data } from "../data/data.js";
+import {fadeIn} from '../variants'
+import {motion} from 'framer-motion'
 const Work = () => {
     const project = data;
   return (
     <div className='min-h-[85vh] lg:min-h-[100vh] flex items-center' id='work'>
     <div className='container mx-auto'>
         <div className='max-w-[100px]  p-4 flex flex-col justify-center w-full h-full'>
-            <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 pb-2 '>
+            <motion.p
+             variants={fadeIn('up', 0.1)}
+             initial='hidden'
+             whileInView={'show'}
+             viewport={{once: false, amount: 0.7}}
+            className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600 pb-2 '>
                 Projects
-            </p>
+            </motion.p>
         </div>
-        <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-4'>
+        <motion.div 
+        variants={fadeIn('up', 0.6)}
+        initial='hidden'
+        whileInView={'show'}
+        viewport={{once: false, amount: 0.7}}
+        className='grid sm:grid-cols-1 md:grid-cols-3 gap-4'>
         {project.map((item, index) => (
   <div
     key={index}
@@ -46,7 +58,7 @@ const Work = () => {
     </div>
   </div>
 ))}
-        </div>
+        </motion.div>
     </div>
 </div>
   )

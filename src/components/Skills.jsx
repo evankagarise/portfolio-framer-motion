@@ -19,36 +19,42 @@ const Skills = () => {
     <div className='container mx-auto'>
     <div className='mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div>
-            <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</p>
-            <p className='py-4'>// These are the technologies I've worked with</p>
-        </div>
-
-        <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-            <motion.div 
+            <motion.p
              variants={fadeIn('up', 0.1)}
              initial='hidden'
              whileInView={'show'}
              viewport={{once: false, amount: 0.7}}
-            className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
-                <p className='my-4'>HTML</p>
-            </motion.div>
-            <motion.div 
-             variants={fadeIn('up', 0.2)}
-             initial='hidden'
-             whileInView={'show'}
-             viewport={{once: false, amount: 0.7}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                <img className='w-20 mx-auto' src={CSS} alt="HTML icon" />
-                <p className='my-4'>CSS</p>
-            </motion.div>
-            <motion.div 
+            className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</motion.p>
+            <motion.p
              variants={fadeIn('up', 0.3)}
              initial='hidden'
              whileInView={'show'}
-             viewport={{once: false, amount: 0.7}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+             viewport={{once: false, amount: 0.7}}
+            className='py-4'>// These are the technologies I've worked with</motion.p>
+        </div>
+
+        <motion.div
+         variants={fadeIn('up', 0.5)}
+         initial='hidden'
+         whileInView={'show'}
+         viewport={{once: false, amount: 0.7}}
+        className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
+            <div 
+             
+            className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
+                <p className='my-4'>HTML</p>
+            </div>
+            <div 
+             className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+                <img className='w-20 mx-auto' src={CSS} alt="HTML icon" />
+                <p className='my-4'>CSS</p>
+            </div>
+            <div 
+              className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                 <img className='w-20 mx-auto' src={JavaScript} alt="HTML icon" />
                 <p className='my-4'>JAVASCRIPT</p>
-            </motion.div>
+            </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                 <img className='w-20 mx-auto' src={ReactImg} alt="HTML icon" />
                 <p className='my-4'>REACT</p>
@@ -73,7 +79,7 @@ const Skills = () => {
                 <img className='w-20 mx-auto' src={FireBase} alt="HTML icon" />
                 <p className='my-4'>FIREBASE</p>
             </div>
-        </div>
+        </motion.div>
     </div>
         </div>
         </div>
