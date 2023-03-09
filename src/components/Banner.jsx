@@ -7,8 +7,9 @@ import {FaGithub, FaLinkedin, FaTwitter} from 'react-icons/fa';
 import {TypeAnimation} from 'react-type-animation';
 
 import {motion} from 'framer-motion';
-
+   
 import {fadeIn} from '../variants'
+import { Link } from 'react-scroll';
 
 const Banner = () => {
   return <div className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id='home'>
@@ -43,18 +44,19 @@ const Banner = () => {
           </div>
             <div className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <button className='btn btn-lg '>Contact Me</button>
-              <a href="#" className='text-gradient btn-link'>My Portfolio</a>
+              <Link to="work" smooth={true} className='text-gradient btn-link cursor-pointer'>My Portfolio</Link>
+              
             </div>
             <div className='flex text-[20px] gap-x-6 max-w-max mx-auto
             lg:mx-0'>
               <a href='#'>
-                <FaGithub />
+                <FaGithub className='hover:scale-110' />
               </a>
               <a href='#'>
-                <FaLinkedin />
+                <FaLinkedin className='hover:scale-110' />
               </a>
               <a href='#'>
-                <FaTwitter />
+                <FaTwitter className='hover:scale-110' />
               </a>
             </div>
         </div>
